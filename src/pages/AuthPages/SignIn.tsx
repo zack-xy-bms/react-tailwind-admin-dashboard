@@ -1,5 +1,5 @@
-import SignInForm from '../../components/auth/SignInForm'
-import PageMeta from '../../components/common/PageMeta'
+import SignInForm from '@/components/auth/SignInForm'
+import PageMeta from '@/components/common/PageMeta'
 import AuthLayout from './AuthPageLayout'
 
 export default function SignIn(): React.ReactElement {

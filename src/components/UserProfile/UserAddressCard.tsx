@@ -1,4 +1,4 @@
-import { useModal } from '../../hooks/useModal'
+import { useModal } from '@/hooks/useModal'
 import Input from '../form/input/InputField'
 import Label from '../form/Label'
 import Button from '../ui/button/Button'
