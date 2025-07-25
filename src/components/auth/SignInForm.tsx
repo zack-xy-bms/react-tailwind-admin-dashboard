@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { Link } from 'react-router'
+import { Button } from '@/components/ui/button'
 import { ChevronLeftIcon, EyeCloseIcon, EyeIcon } from '../../icons'
 import Checkbox from '../form/input/Checkbox'
 import Input from '../form/input/InputField'
 import Label from '../form/Label'
-import Button from '../ui/button/Button'
 
 export default function SignInForm(): React.ReactElement {
   const [showPassword, setShowPassword] = useState(false)
@@ -135,7 +135,7 @@ export default function SignInForm(): React.ReactElement {
                   </Link>
                 </div>
                 <div>
-                  <Button className="w-full" size="sm">
+                  <Button className="w-full">
                     Sign in
                   </Button>
                 </div>

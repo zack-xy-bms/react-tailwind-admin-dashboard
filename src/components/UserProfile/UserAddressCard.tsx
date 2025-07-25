@@ -1,7 +1,7 @@
+import { Button } from '@/components/ui/button'
 import { useModal } from '@/hooks/useModal'
 import Input from '../form/input/InputField'
 import Label from '../form/Label'
-import Button from '../ui/button/Button'
 import { Modal } from '../ui/modal'
 
 export default function UserAddressCard(): React.ReactElement {
@@ -118,10 +118,11 @@ export default function UserAddressCard(): React.ReactElement {
               </div>
             </div>
             <div className="flex items-center gap-3 px-2 mt-6 lg:justify-end">
-              <Button size="sm" variant="outline" onClick={closeModal}>
+
+              <Button size="lg" variant="outline" onClick={closeModal}>
                 Close
               </Button>
-              <Button size="sm" onClick={handleSave}>
+              <Button size="lg" onClick={handleSave}>
                 Save Changes
               </Button>
             </div>

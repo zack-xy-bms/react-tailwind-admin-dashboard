@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
-import ThemeTogglerTwo from '../../components/common/ThemeTogglerTwo'
+import ThemeTogglerTwo from '@/components/common/ThemeTogglerTwo'
 
 export default function AuthLayout({
   children,
@@ -13,7 +13,6 @@ export default function AuthLayout({
         {children}
         <div className="items-center hidden w-full h-full lg:w-1/2 bg-brand-950 dark:bg-white/5 lg:grid">
           <div className="relative flex items-center justify-center z-1">
-            {/* <!-- ===== Common Grid Shape Start ===== --> */}
             <div className="flex flex-col items-center max-w-xs">
               <Link to="/" className="block mb-4">
                 <img
