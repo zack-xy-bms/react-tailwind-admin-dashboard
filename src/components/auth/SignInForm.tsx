@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router'
 import { Button } from '@/components/ui/button'
-import { MyXLogo } from '@/components/ui/icons'
-import { Icons } from '@/components/ui/icons'
+import { Icons, XLogoIcon } from '@/components/ui/icons'
 import Checkbox from '../form/input/Checkbox'
 import Input from '../form/input/InputField'
 import Label from '../form/Label'
@@ -41,7 +40,7 @@ export default function SignInForm(): React.ReactElement {
                 Sign in with Google
               </Button>
               <Button variant="grey" size="lg">
-                <MyXLogo />
+                <XLogoIcon />
                 Sign in with X
               </Button>
             </div>
