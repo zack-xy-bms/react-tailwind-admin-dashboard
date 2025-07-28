@@ -1,4 +1,4 @@
-import Badge from '../ui/badge/Badge'
+import { Badge } from '@/components/ui/badge'
 import {
   Table,
   TableBody,
@@ -186,8 +186,7 @@ export default function RecentOrders(): React.ReactElement {
                 </TableCell>
                 <TableCell className="py-3 text-gray-500 text-theme-sm dark:text-gray-400">
                   <Badge
-                    size="sm"
-                    color={
+                    variant={
                       product.status === 'Delivered'
                         ? 'success'
                         : product.status === 'Pending'

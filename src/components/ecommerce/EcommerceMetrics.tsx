@@ -1,5 +1,5 @@
-import { Icons } from "@/components/ui/icons";
-import Badge from '../ui/badge/Badge'
+import { Badge } from '@/components/ui/badge'
+import { Icons } from '@/components/ui/icons'
 
 export default function EcommerceMetrics(): React.ReactElement {
   return (
@@ -19,7 +19,7 @@ export default function EcommerceMetrics(): React.ReactElement {
               3,782
             </h4>
           </div>
-          <Badge color="success">
+          <Badge variant="success">
             <Icons.ArrowUp />
             11.01%
           </Badge>
@@ -42,7 +42,7 @@ export default function EcommerceMetrics(): React.ReactElement {
             </h4>
           </div>
 
-          <Badge color="error">
+          <Badge variant="error">
             <Icons.ArrowDown />
             9.05%
           </Badge>
