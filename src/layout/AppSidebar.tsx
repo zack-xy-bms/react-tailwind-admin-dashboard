@@ -1,21 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router'
 
+import { Icons } from '@/components/ui/icons'
 import { useSidebar } from '@/context/SidebarContext'
-// Assume these icons are imported from an icon library
-import {
-  BoxCubeIcon,
-  CalenderIcon,
-  ChevronDownIcon,
-  GridIcon,
-  HorizontaLDots,
-  ListIcon,
-  PageIcon,
-  PieChartIcon,
-  PlugInIcon,
-  TableIcon,
-  UserCircleIcon,
-} from '../icons'
 import SidebarWidget from './SidebarWidget'
 
 interface NavItem {
@@ -27,33 +14,33 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   {
-    icon: <GridIcon />,
+    icon: <Icons.LayoutGrid />,
     name: 'Dashboard',
     subItems: [{ name: 'Ecommerce', path: '/', pro: false }],
   },
   {
-    icon: <CalenderIcon />,
+    icon: <Icons.Calendar />,
     name: 'Calendar',
     path: '/calendar',
   },
   {
-    icon: <UserCircleIcon />,
+    icon: <Icons.CircleUser />,
     name: 'User Profile',
     path: '/profile',
   },
   {
     name: 'Forms',
-    icon: <ListIcon />,
+    icon: <Icons.Rows3 />,
     subItems: [{ name: 'Form Elements', path: '/form-elements', pro: false }],
   },
   {
     name: 'Tables',
-    icon: <TableIcon />,
+    icon: <Icons.Sheet />,
     subItems: [{ name: 'Basic Tables', path: '/basic-tables', pro: false }],
   },
   {
     name: 'Pages',
-    icon: <PageIcon />,
+    icon: <Icons.Files />,
     subItems: [
       { name: 'Blank Page', path: '/blank', pro: false },
       { name: '404 Error', path: '/error-404', pro: false },
@@ -63,7 +50,7 @@ const navItems: NavItem[] = [
 
 const othersItems: NavItem[] = [
   {
-    icon: <PieChartIcon />,
+    icon: <Icons.ChartPie />,
     name: 'Charts',
     subItems: [
       { name: 'Line Chart', path: '/line-chart', pro: false },
@@ -71,7 +58,7 @@ const othersItems: NavItem[] = [
     ],
   },
   {
-    icon: <BoxCubeIcon />,
+    icon: <Icons.Box />,
     name: 'UI Elements',
     subItems: [
       { name: 'Alerts', path: '/alerts', pro: false },
@@ -82,7 +69,7 @@ const othersItems: NavItem[] = [
     ],
   },
   {
-    icon: <PlugInIcon />,
+    icon: <Icons.Plug />,
     name: 'Authentication',
     subItems: [
       { name: 'Sign In', path: '/signin', pro: false },
@@ -190,7 +177,7 @@ const AppSidebar: React.FC = () => {
                     <span className="menu-item-text">{nav.name}</span>
                   )}
                   {(isExpanded || isHovered || isMobileOpen) && (
-                    <ChevronDownIcon
+                    <Icons.ChevronDown
                       className={`ml-auto w-5 h-5 transition-transform duration-200 ${
                         openSubmenu?.type === menuType
                         && openSubmenu?.index === index
@@ -350,7 +337,7 @@ const AppSidebar: React.FC = () => {
                       'Menu'
                     )
                   : (
-                      <HorizontaLDots className="size-6" />
+                      <Icons.Ellipsis className="size-6" />
                     )}
               </h2>
               {renderMenuItems(navItems, 'main')}
@@ -368,7 +355,7 @@ const AppSidebar: React.FC = () => {
                       'Others'
                     )
                   : (
-                      <HorizontaLDots />
+                      <Icons.Ellipsis />
                     )}
               </h2>
               {renderMenuItems(othersItems, 'others')}
