@@ -14,13 +14,16 @@ import {
   Eye,
   EyeClosed,
   Files,
+  Info,
   LayoutGrid,
+  LogOut,
   Mail,
   Moon,
   Pencil,
   Plug,
   Plus,
   Rows3,
+  Settings,
   Sheet,
   UsersRound,
 } from 'lucide-react'
@@ -59,6 +62,9 @@ const Icons = {
   Clock3,
   Mail,
   Pencil,
+  Settings,
+  Info,
+  LogOut,
 }
 
 export {
