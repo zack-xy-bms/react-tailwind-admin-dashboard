@@ -1,44 +1,29 @@
-<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 8.42105C0 3.77023 3.77023 0 8.42105 0H23.5789C28.2298 0 32 3.77023 32 8.42105V23.5789C32 28.2298 28.2298 32 23.5789 32H8.42105C3.77023 32 0 28.2298 0 23.5789V8.42105Z" fill="#465FFF"/>
-<g filter="url(#filter0_d_1884_16361)">
-<path d="M8.42383 8.42152C8.42383 7.49135 9.17787 6.7373 10.108 6.7373C11.0382 6.7373 11.7922 7.49135 11.7922 8.42152V23.5794C11.7922 24.5096 11.0382 25.2636 10.108 25.2636C9.17787 25.2636 8.42383 24.5096 8.42383 23.5794V8.42152Z" fill="white"/>
-</g>
-<g filter="url(#filter1_d_1884_16361)">
-<path d="M14.7422 15.1569C14.7422 14.2267 15.4962 13.4727 16.4264 13.4727C17.3566 13.4727 18.1106 14.2267 18.1106 15.1569V23.5779C18.1106 24.5081 17.3566 25.2621 16.4264 25.2621C15.4962 25.2621 14.7422 24.5081 14.7422 23.5779V15.1569Z" fill="white" fill-opacity="0.9" shape-rendering="crispEdges"/>
-</g>
-<g filter="url(#filter2_d_1884_16361)">
-<path d="M21.0547 10.9459C21.0547 10.0158 21.8087 9.26172 22.7389 9.26172C23.6691 9.26172 24.4231 10.0158 24.4231 10.9459V23.5775C24.4231 24.5077 23.6691 25.2617 22.7389 25.2617C21.8087 25.2617 21.0547 24.5077 21.0547 23.5775V10.9459Z" fill="white" fill-opacity="0.7" shape-rendering="crispEdges"/>
-</g>
-<defs>
-<filter id="filter0_d_1884_16361" x="7.42383" y="6.2373" width="5.36841" height="20.5264" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="0.5"/>
-<feGaussianBlur stdDeviation="0.5"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1884_16361"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1884_16361" result="shape"/>
-</filter>
-<filter id="filter1_d_1884_16361" x="13.7422" y="12.9727" width="5.36841" height="13.7891" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="0.5"/>
-<feGaussianBlur stdDeviation="0.5"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1884_16361"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1884_16361" result="shape"/>
-</filter>
-<filter id="filter2_d_1884_16361" x="20.0547" y="8.76172" width="5.36841" height="18" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="0.5"/>
-<feGaussianBlur stdDeviation="0.5"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1884_16361"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1884_16361" result="shape"/>
-</filter>
-</defs>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>logo-icon</title>
+    <defs>
+        <path d="M-0.0482837529,1.11115667 C-0.0482837529,1.61216547 0.357864124,2.01831335 0.85887292,2.01831335 L5.65530074,2.01831335 C6.20758549,2.01831335 6.65530074,2.4660286 6.65530074,3.01831335 C6.65530074,3.23453744 6.5852175,3.44493693 6.45555693,3.6179716 L-0.100256195,12.3668382 C-0.229916759,12.5398729 -0.3,12.7502724 -0.3,12.9664965 L-0.3,13.4187002 C-0.3,13.8524093 0.0515906994,14.204 0.485299807,14.204 L9.79284333,14.204 C10.2938521,14.204 10.7,13.7978521 10.7,13.2968433 C10.7,12.7958345 10.2938521,12.3896867 9.79284333,12.3896867 L4.31447155,12.3896867 C3.7621868,12.3896867 3.31447155,11.9419714 3.31447155,11.3896867 C3.31447155,11.1737792 3.38434993,10.9636705 3.5136606,10.7907694 L10.0980649,1.98677627 C10.2273756,1.81387524 10.297254,1.60376649 10.297254,1.38785906 L10.297254,0.962220503 C10.297254,0.543466882 9.95778712,0.204 9.5390335,0.204 L0.85887292,0.204 C0.357864124,0.204 -0.0482837529,0.610147877 -0.0482837529,1.11115667 Z" id="path-1"></path>
+        <filter x="-127.3%" y="-71.4%" width="354.5%" height="300.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.25 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="logo-icon" stroke="none" fill="none" fill-rule="evenodd" stroke-width="1">
+        <g id="编组">
+            <path d="M0,8.42105 C0,3.77023 3.77023,0 8.42105,0 L23.5789,0 C28.2298,0 32,3.77023 32,8.42105 L32,23.5789 C32,28.2298 28.2298,32 23.5789,32 L8.42105,32 C3.77023,32 0,28.2298 0,23.5789 L0,8.42105 Z" id="路径" fill="#4D7EFF" fill-rule="nonzero"></path>
+            <g id="A" transform="translate(22, 13)" fill="#FFFFFF" fill-rule="nonzero">
+                <path d="M3.372,4.432 L0,13 L1.056,13 L1.968,10.6 L5.904,10.6 L6.816,13 L7.884,13 L4.512,4.432 L3.372,4.432 Z M2.28,9.772 L3.924,5.488 L3.972,5.488 L5.592,9.772 L2.28,9.772 Z" id="形状"></path>
+            </g>
+            <g id="z" transform="translate(10.3, 2.796)" fill-rule="nonzero">
+                <g id="路径">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#F5F5F5" xlink:href="#path-1"></use>
+                </g>
+            </g>
+            <g id="R" transform="translate(1, 13)" fill="#FFFFFF" fill-rule="nonzero">
+                <path d="M0.864,4.432 L0.864,13 L1.848,13 L1.848,9.316 L4.44,9.316 C4.98,9.316 5.388,9.412 5.676,9.628 C5.988,9.844 6.168,10.216 6.216,10.72 L6.324,11.86 C6.36,12.34 6.48,12.712 6.672,13 L7.74,13 C7.488,12.688 7.332,12.268 7.284,11.74 L7.152,10.42 C7.056,9.556 6.6,9.04 5.784,8.86 L5.784,8.836 C6.276,8.716 6.66,8.476 6.948,8.092 C7.212,7.72 7.344,7.3 7.344,6.82 C7.344,6.028 7.08,5.428 6.576,5.02 C6.084,4.624 5.412,4.432 4.56,4.432 L0.864,4.432 Z M1.848,5.284 L4.44,5.284 C5.1,5.284 5.592,5.416 5.904,5.68 C6.192,5.932 6.348,6.328 6.348,6.856 C6.348,7.36 6.192,7.744 5.892,8.02 C5.556,8.308 5.064,8.464 4.44,8.464 L1.848,8.464 L1.848,5.284 Z" id="形状"></path>
+            </g>
+        </g>
+    </g>
 </svg>

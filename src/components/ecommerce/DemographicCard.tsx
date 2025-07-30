@@ -62,13 +62,13 @@ export default function DemographicCard(): React.ReactElement {
       <div className="space-y-5">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="items-center w-full rounded-full max-w-8">
-              <img src="./images/country/country-01.svg" alt="usa" />
+            <div className="text-title-lg">
+              🇨🇳
             </div>
             <div>
-              <p className="font-semibold text-gray-800 text-theme-sm dark:text-white/90">
-                USA
-              </p>
+              <span className="font-semibold text-gray-800 text-theme-sm dark:text-white/90">
+                China
+              </span>
               <span className="block text-gray-500 text-theme-xs dark:text-gray-400">
                 2,379 Customers
               </span>
@@ -87,12 +87,12 @@ export default function DemographicCard(): React.ReactElement {
 
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="items-center w-full rounded-full max-w-8">
-              <img src="./images/country/country-02.svg" alt="france" />
+            <div className="text-title-lg">
+              🇺🇸
             </div>
             <div>
               <p className="font-semibold text-gray-800 text-theme-sm dark:text-white/90">
-                France
+                USA
               </p>
               <span className="block text-gray-500 text-theme-xs dark:text-gray-400">
                 589 Customers

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router'
 import { Button } from '@/components/ui/button'
-import { Icons, XLogoIcon } from '@/components/ui/icons'
+import { GoogleIcon, Icons, XLogoIcon } from '@/components/ui/icons'
 import Checkbox from '../form/input/Checkbox'
 import Input from '../form/input/InputField'
 import Label from '../form/Label'
@@ -33,10 +33,7 @@ export default function SignInForm(): React.ReactElement {
           <div>
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-5">
               <Button variant="grey" size="lg">
-                <img
-                  src="/images/logo/google.svg"
-                  alt="Logo"
-                />
+                <GoogleIcon />
                 Sign in with Google
               </Button>
               <Button variant="grey" size="lg">

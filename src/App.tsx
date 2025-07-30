@@ -11,9 +11,6 @@ import Home from '@/pages/Dashboard/Home'
 import FormElements from '@/pages/Forms/FormElements'
 import NotFound from '@/pages/OtherPage/NotFound'
 import BasicTables from '@/pages/Tables/BasicTables'
-import Alerts from '@/pages/UiElements/Alerts'
-import Images from '@/pages/UiElements/Images'
-import Videos from '@/pages/UiElements/Videos'
 import UserProfiles from '@/pages/UserProfiles'
 
 export default function App(): React.ReactElement {
@@ -38,9 +35,6 @@ export default function App(): React.ReactElement {
             <Route path="/basic-tables" element={<BasicTables />} />
 
             {/* Ui Elements */}
-            <Route path="/alerts" element={<Alerts />} />
-            <Route path="/images" element={<Images />} />
-            <Route path="/videos" element={<Videos />} />
 
             {/* Charts */}
             <Route path="/line-chart" element={<LineChart />} />

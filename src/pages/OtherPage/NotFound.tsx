@@ -14,6 +14,11 @@ export default function NotFound(): React.ReactElement {
             ERROR
           </h1>
 
+          {/*
+            图片来自(https://undraw.co/search)
+            亮模式主颜色：#FF4F4F
+            暗模式主颜色：#FF7373
+          */}
           <img src="/images/error/404.svg" alt="404" className="dark:hidden" />
           <img
             src="/images/error/404-dark.svg"

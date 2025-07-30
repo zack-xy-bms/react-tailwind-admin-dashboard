@@ -30,6 +30,7 @@ import {
   X,
 } from 'lucide-react'
 import { ReactComponent as FacebookIcon } from './facebook.svg?react'
+import { ReactComponent as GoogleIcon } from './google.svg?react'
 import { ReactComponent as InstagramIcon } from './instagram.svg?react'
 import { ReactComponent as LinkedinIcon } from './linkedin.svg?react'
 import { ReactComponent as XLogoIcon } from './xlogo.svg?react'
@@ -73,6 +74,7 @@ const Icons = {
 
 export {
   FacebookIcon, // 自定义图标(svg文件图标)
+  GoogleIcon,
   Icons, // lucide-react定义的图标
   InstagramIcon,
   LinkedinIcon,
