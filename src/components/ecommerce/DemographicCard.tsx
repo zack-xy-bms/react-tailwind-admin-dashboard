@@ -1,19 +1,24 @@
 import { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu'
 import { Icons } from '@/components/ui/icons'
-import { Dropdown } from '../ui/dropdown/Dropdown'
-import { DropdownItem } from '../ui/dropdown/DropdownItem'
+
 import CountryMap from './CountryMap'
 
 export default function DemographicCard(): React.ReactElement {
+  // eslint-disable-next-line unused-imports/no-unused-vars
   const [isOpen, setIsOpen] = useState(false)
 
-  function toggleDropdown(): void {
-    setIsOpen(!isOpen)
+  function handleOpenChange(open: boolean): void {
+    setIsOpen(open)
   }
 
-  function closeDropdown(): void {
-    setIsOpen(false)
-  }
   return (
     <div className="rounded-2xl border border-gray-200 bg-white p-5 dark:border-gray-800 dark:bg-white/[0.03] sm:p-6">
       <div className="flex justify-between">
@@ -26,27 +31,23 @@ export default function DemographicCard(): React.ReactElement {
           </p>
         </div>
         <div className="relative inline-block">
-          <button className="dropdown-toggle" onClick={toggleDropdown}>
-            <Icons.EllipsisVertical className="text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 size-6" />
-          </button>
-          <Dropdown
-            isOpen={isOpen}
-            onClose={closeDropdown}
-            className="w-40 p-2"
-          >
-            <DropdownItem
-              onItemClick={closeDropdown}
-              className="flex w-full font-normal text-left text-gray-500 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-300"
-            >
-              View More
-            </DropdownItem>
-            <DropdownItem
-              onItemClick={closeDropdown}
-              className="flex w-full font-normal text-left text-gray-500 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-300"
-            >
-              Delete
-            </DropdownItem>
-          </Dropdown>
+          <DropdownMenu onOpenChange={handleOpenChange}>
+            <DropdownMenuTrigger asChild>
+              <Button variant="link" size="icon" className="text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 size-8">
+                <Icons.EllipsisVertical className="size-6" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-40" align="end">
+              <DropdownMenuGroup>
+                <DropdownMenuItem className="flex w-full font-normal text-left text-gray-500 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-300">
+                  View More
+                </DropdownMenuItem>
+                <DropdownMenuItem className="flex w-full font-normal text-left text-gray-500 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-300">
+                  Delete
+                </DropdownMenuItem>
+              </DropdownMenuGroup>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       </div>
       <div className="px-4 py-6 my-6 overflow-hidden border border-gary-200 rounded-2xl dark:border-gray-800 sm:px-6">

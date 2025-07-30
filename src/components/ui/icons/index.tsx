@@ -1,6 +1,7 @@
 import {
   ArrowDown,
   ArrowUp,
+  Bell,
   Box,
   Calendar,
   ChartPie,
@@ -26,6 +27,7 @@ import {
   Settings,
   Sheet,
   UsersRound,
+  X,
 } from 'lucide-react'
 import { ReactComponent as FacebookIcon } from './facebook.svg?react'
 import { ReactComponent as InstagramIcon } from './instagram.svg?react'
@@ -65,6 +67,8 @@ const Icons = {
   Settings,
   Info,
   LogOut,
+  Bell,
+  X,
 }
 
 export {
