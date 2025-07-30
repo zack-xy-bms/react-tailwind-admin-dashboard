@@ -32,7 +32,7 @@ export default function UserDropdown(): React.ReactElement {
             className="flex cursor-pointer items-center text-gray-700 dropdown-toggle dark:text-gray-400"
           >
             <span className="mr-3 overflow-hidden rounded-full h-11 w-11">
-              <img src="/images/user/owner.jpg" alt="User" />
+              <img src="https://s21.ax1x.com/2025/07/30/pVYjYX6.jpg" alt="User" />
             </span>
 
             <span className="block mr-1 font-medium text-theme-sm">Zack</span>

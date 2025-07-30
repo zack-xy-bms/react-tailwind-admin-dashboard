@@ -12,7 +12,6 @@ import FormElements from '@/pages/Forms/FormElements'
 import NotFound from '@/pages/OtherPage/NotFound'
 import BasicTables from '@/pages/Tables/BasicTables'
 import Alerts from '@/pages/UiElements/Alerts'
-import Avatars from '@/pages/UiElements/Avatars'
 import Images from '@/pages/UiElements/Images'
 import Videos from '@/pages/UiElements/Videos'
 import UserProfiles from '@/pages/UserProfiles'
@@ -40,7 +39,6 @@ export default function App(): React.ReactElement {
 
             {/* Ui Elements */}
             <Route path="/alerts" element={<Alerts />} />
-            <Route path="/avatars" element={<Avatars />} />
             <Route path="/images" element={<Images />} />
             <Route path="/videos" element={<Videos />} />
 
