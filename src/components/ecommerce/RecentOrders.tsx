@@ -3,9 +3,10 @@ import {
   Table,
   TableBody,
   TableCell,
+  TableHead,
   TableHeader,
   TableRow,
-} from '../ui/table'
+} from '@/components/ui/table'
 
 // Define the TypeScript interface for the table rows
 interface Product {
@@ -127,30 +128,10 @@ export default function RecentOrders(): React.ReactElement {
           {/* Table Header */}
           <TableHeader className="border-gray-100 dark:border-gray-800 border-y">
             <TableRow>
-              <TableCell
-                isHeader
-                className="py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
-              >
-                Products
-              </TableCell>
-              <TableCell
-                isHeader
-                className="py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
-              >
-                Category
-              </TableCell>
-              <TableCell
-                isHeader
-                className="py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
-              >
-                Price
-              </TableCell>
-              <TableCell
-                isHeader
-                className="py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
-              >
-                Status
-              </TableCell>
+              <TableHead className="py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400">Products</TableHead>
+              <TableHead className="py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400">Category</TableHead>
+              <TableHead className="py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400">Price</TableHead>
+              <TableHead className="py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400">Status</TableHead>
             </TableRow>
           </TableHeader>
 
