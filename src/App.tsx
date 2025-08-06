@@ -11,6 +11,7 @@ import Home from '@/pages/Dashboard/Home'
 import FormElements from '@/pages/Forms/FormElements'
 import NotFound from '@/pages/OtherPage/NotFound'
 import BasicTables from '@/pages/Tables/BasicTables'
+import ReactHookForm from '@/pages/UiElements/ReactHookForm'
 import UserProfiles from '@/pages/UserProfiles'
 
 export default function App(): React.ReactElement {
@@ -35,6 +36,7 @@ export default function App(): React.ReactElement {
             <Route path="/basic-tables" element={<BasicTables />} />
 
             {/* Ui Elements */}
+            <Route path="/react-hook-form" element={<ReactHookForm />} />
 
             {/* Charts */}
             <Route path="/line-chart" element={<LineChart />} />

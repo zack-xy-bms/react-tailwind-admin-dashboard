@@ -61,6 +61,7 @@ const othersItems: NavItem[] = [
     icon: <Icons.Box />,
     name: 'UI Elements',
     subItems: [
+      { name: 'react-hook-form', path: '/react-hook-form', pro: false },
     ],
   },
   {

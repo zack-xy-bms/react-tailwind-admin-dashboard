@@ -1,11 +1,20 @@
+import type { UserInfos } from '@/types'
+import { useState } from 'react'
 import { Button } from '@/components/ui/button'
-import { useModal } from '../../hooks/useModal'
+import { useModal } from '@/hooks/useModal'
 import Input from '../form/input/InputField'
 import Label from '../form/Label'
 import { Modal } from '../ui/modal'
 
 export default function UserInfoCard(): React.ReactElement {
   const { isOpen, openModal, closeModal } = useModal()
+  const [userInfo] = useState<Omit<UserInfos, 'socialMedia'>>({
+    firstname: 'Lisa',
+    lastname: 'Wang',
+    email: 'lisa.wang@example.com',
+    phone: '+86 123 4567 890',
+    bio: 'Team Manager',
+  })
   const handleSave = (): void => {
     // Handle save logic here
     // eslint-disable-next-line no-console
@@ -26,7 +35,7 @@ export default function UserInfoCard(): React.ReactElement {
                 First Name
               </p>
               <p className="text-sm font-medium text-gray-800 dark:text-white/90">
-                Musharof
+                {userInfo.firstname}
               </p>
             </div>
 
@@ -35,7 +44,7 @@ export default function UserInfoCard(): React.ReactElement {
                 Last Name
               </p>
               <p className="text-sm font-medium text-gray-800 dark:text-white/90">
-                Chowdhury
+                {userInfo.lastname}
               </p>
             </div>
 
@@ -44,7 +53,7 @@ export default function UserInfoCard(): React.ReactElement {
                 Email address
               </p>
               <p className="text-sm font-medium text-gray-800 dark:text-white/90">
-                randomuser@pimjo.com
+                {userInfo.email}
               </p>
             </div>
 
@@ -53,7 +62,7 @@ export default function UserInfoCard(): React.ReactElement {
                 Phone
               </p>
               <p className="text-sm font-medium text-gray-800 dark:text-white/90">
-                +09 363 398 46
+                {userInfo.phone}
               </p>
             </div>
 
@@ -62,7 +71,7 @@ export default function UserInfoCard(): React.ReactElement {
                 Bio
               </p>
               <p className="text-sm font-medium text-gray-800 dark:text-white/90">
-                Team Manager
+                {userInfo.bio}
               </p>
             </div>
           </div>

@@ -35,7 +35,7 @@ export default function UserDropdown(): React.ReactElement {
               <img src="https://s21.ax1x.com/2025/07/30/pVYjYX6.jpg" alt="User" />
             </span>
 
-            <span className="block mr-1 font-medium text-theme-sm">Zack</span>
+            <span className="block mr-1 font-medium text-theme-sm">Lisa</span>
             <Icons.ChevronDown
               size={15}
               className={`stroke-gray-500 dark:stroke-gray-400 transition-transform duration-200 ${
@@ -48,10 +48,10 @@ export default function UserDropdown(): React.ReactElement {
           <DropdownMenuLabel>
             <div>
               <span className="block font-medium text-gray-700 text-theme-sm dark:text-gray-400">
-                Zack Zheng
+                Lisa Wang
               </span>
               <span className="mt-0.5 block text-theme-xs text-gray-500 dark:text-gray-400">
-                zack_zhengxiyun@163.com
+                lisa.wang@example.com
               </span>
             </div>
           </DropdownMenuLabel>
