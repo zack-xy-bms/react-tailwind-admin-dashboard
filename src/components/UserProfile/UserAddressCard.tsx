@@ -15,8 +15,6 @@ import { Label } from '@/components/ui/label'
 
 // import { useModal } from '@/hooks/useModal'
 
-import { Modal } from '../ui/modal'
-
 export default function UserAddressCard(): React.ReactElement {
   // const { isOpen, openModal, closeModal } = useModal()
   return (
@@ -75,7 +73,7 @@ export default function UserAddressCard(): React.ReactElement {
                   Edit
                 </Button>
               </DialogTrigger>
-              <DialogContent className="sm:max-w-[425px]">
+              <DialogContent className="sm:max-w-[700px]">
                 <DialogHeader>
                   <DialogTitle>Edit Address</DialogTitle>
                   <DialogDescription>
