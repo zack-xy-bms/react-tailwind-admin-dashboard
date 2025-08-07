@@ -1,7 +1,7 @@
 import { useState } from 'react'
+import { Label } from '@/components/ui/label'
 import ComponentCard from '../../common/ComponentCard'
 import Input from '../input/InputField'
-import Label from '../Label'
 
 export default function InputStates(): React.ReactElement {
   const [email, setEmail] = useState('')

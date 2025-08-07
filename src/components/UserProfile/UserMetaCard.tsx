@@ -1,8 +1,8 @@
 import { Button } from '@/components/ui/button'
 import { FacebookIcon, Icons, InstagramIcon, LinkedinIcon, XLogoIcon } from '@/components/ui/icons'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
 import { useModal } from '../../hooks/useModal'
-import Input from '../form/input/InputField'
-import Label from '../form/Label'
 import { Modal } from '../ui/modal'
 
 export default function UserMetaCard(): React.ReactElement {

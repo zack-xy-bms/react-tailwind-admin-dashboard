@@ -1,6 +1,6 @@
 import { useState } from 'react'
+import { Label } from '@/components/ui/label'
 import ComponentCard from '../../common/ComponentCard'
-import Label from '../Label'
 import MultiSelect from '../MultiSelect'
 import Select from '../Select'
 

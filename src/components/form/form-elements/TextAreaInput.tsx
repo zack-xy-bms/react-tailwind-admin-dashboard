@@ -1,7 +1,7 @@
 import { useState } from 'react'
+import { Label } from '@/components/ui/label'
 import ComponentCard from '../../common/ComponentCard'
 import TextArea from '../input/TextArea'
-import Label from '../Label'
 
 export default function TextAreaInput(): React.ReactElement {
   const [message, setMessage] = useState('')

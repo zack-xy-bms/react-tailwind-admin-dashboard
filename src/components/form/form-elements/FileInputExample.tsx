@@ -1,6 +1,6 @@
+import { Label } from '@/components/ui/label'
 import ComponentCard from '../../common/ComponentCard'
 import FileInput from '../input/FileInput'
-import Label from '../Label'
 
 export default function FileInputExample(): React.ReactElement {
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>): void => {

@@ -1,7 +1,7 @@
 import flatpickr from 'flatpickr'
 import { useEffect } from 'react'
 import { Icons } from '@/components/ui/icons'
-import Label from './Label'
+import { Label } from '@/components/ui/label'
 import 'flatpickr/dist/flatpickr.css'
 import DateOption = flatpickr.Options.DateOption
 import Hook = flatpickr.Options.Hook

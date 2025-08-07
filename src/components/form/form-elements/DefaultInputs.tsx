@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { Icons } from '@/components/ui/icons'
+import { Label } from '@/components/ui/label'
 import ComponentCard from '../../common/ComponentCard'
 import DatePicker from '../date-picker.tsx'
 import Input from '../input/InputField'
-import Label from '../Label'
 import Select from '../Select'
 
 export default function DefaultInputs(): React.ReactElement {

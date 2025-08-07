@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { Link } from 'react-router'
 import { Button } from '@/components/ui/button'
+import { Checkbox } from '@/components/ui/checkbox'
 import { GoogleIcon, Icons, XLogoIcon } from '@/components/ui/icons'
-import Checkbox from '../form/input/Checkbox'
-import Input from '../form/input/InputField'
-import Label from '../form/Label'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
 
 export default function SignInForm(): React.ReactElement {
   const [showPassword, setShowPassword] = useState(false)
@@ -90,7 +90,7 @@ export default function SignInForm(): React.ReactElement {
                 </div>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <Checkbox checked={isChecked} onChange={setIsChecked} />
+                    <Checkbox checked={isChecked} onCheckedChange={(checked) => { setIsChecked(!!checked) }} />
                     <span className="block font-normal text-gray-700 text-theme-sm dark:text-gray-400">
                       Keep me logged in
                     </span>

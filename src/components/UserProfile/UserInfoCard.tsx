@@ -1,9 +1,9 @@
 import type { UserInfos } from '@/types'
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
 import { useModal } from '@/hooks/useModal'
-import Input from '../form/input/InputField'
-import Label from '../form/Label'
 import { Modal } from '../ui/modal'
 
 export default function UserInfoCard(): React.ReactElement {

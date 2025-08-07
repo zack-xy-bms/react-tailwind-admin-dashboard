@@ -1,8 +1,8 @@
 import { Icons } from '@/components/ui/icons'
+import { Label } from '@/components/ui/label'
 import ComponentCard from '../../common/ComponentCard'
 import PhoneInput from '../group-input/PhoneInput'
 import Input from '../input/InputField'
-import Label from '../Label'
 
 export default function InputGroup(): React.ReactElement {
   const countries = [
