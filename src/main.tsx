@@ -5,7 +5,6 @@ import { ThemeProvider } from '@/context/ThemeContext.tsx'
 import App from './App.tsx'
 import './index.css'
 import 'swiper/swiper-bundle.css'
-import 'flatpickr/dist/flatpickr.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
