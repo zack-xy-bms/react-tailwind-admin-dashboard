@@ -1,4 +1,5 @@
 import {
+  AlignLeft,
   ArrowDown,
   ArrowUp,
   Bell,
@@ -24,8 +25,10 @@ import {
   Plug,
   Plus,
   Rows3,
+  Search,
   Settings,
   Sheet,
+  Sun,
   UsersRound,
   X,
 } from 'lucide-react'
@@ -46,7 +49,9 @@ const Icons = {
   ChevronLeft,
   EyeClosed,
   Eye,
+  Ellipsis,
   EllipsisVertical,
+  AlignLeft,
   ArrowUp,
   ArrowDown,
   Box,
@@ -60,7 +65,6 @@ const Icons = {
   ChartPie,
   Plug,
   ChevronDown,
-  Ellipsis,
   Plus,
   Clock3,
   Mail,
@@ -69,6 +73,8 @@ const Icons = {
   Info,
   LogOut,
   Bell,
+  Search,
+  Sun,
   X,
 }
 
