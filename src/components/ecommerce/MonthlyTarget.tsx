@@ -21,7 +21,7 @@ export default function MonthlyTarget(): React.ReactElement {
   const data = [
     { name: 'Progress', value: series }, // 进度值
     { name: 'Remaining', value: 100 - series }, // 剩余部分
-  ];
+  ]
 
   // eslint-disable-next-line unused-imports/no-unused-vars
   const [isOpen, setIsOpen] = useState(false)
@@ -78,7 +78,7 @@ export default function MonthlyTarget(): React.ReactElement {
                   cornerRadius={10}
                   strokeLinecap="round"
                 >
-                  <Cell fill="#465fff"/>
+                  <Cell fill="#465fff" />
                   {' '}
                   <Cell fill="#eee" />
                   {' '}
