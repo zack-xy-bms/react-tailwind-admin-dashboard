@@ -4,6 +4,7 @@ import AppLayout from '@/layout/AppLayout'
 import SignIn from '@/pages/AuthPages/SignIn'
 import SignUp from '@/pages/AuthPages/SignUp'
 import Blank from '@/pages/Blank'
+import ServerError from "@/pages/OtherPage/ServerError";
 import Calendar from '@/pages/Calendar'
 import BarChart from '@/pages/Charts/BarChart'
 import LineChart from '@/pages/Charts/LineChart'
@@ -46,6 +47,7 @@ export default function App(): React.ReactElement {
           {/* Auth Layout */}
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/error-500" element={<ServerError />} />
 
           {/* Fallback Route */}
           <Route path="*" element={<NotFound />} />
