@@ -1,6 +1,5 @@
-import type { ApexOptions } from 'apexcharts'
 import { useState } from 'react'
-import Chart from 'react-apexcharts'
+import { Cell, Pie, PieChart, ResponsiveContainer } from 'recharts'
 import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
@@ -12,59 +11,18 @@ import {
 import { Icons } from '@/components/ui/icons'
 
 export default function MonthlyTarget(): React.ReactElement {
-  const series = [75.55]
+  const series = 75.55
   const infos = {
     Target: { count: '$20K', type: 'down' },
     Revenue: { count: '$30K', type: 'up' },
     Today: { count: '$20K', type: 'up' },
   }
-  const options: ApexOptions = {
-    colors: ['#465FFF'],
-    chart: {
-      fontFamily: 'Outfit, sans-serif',
-      type: 'radialBar',
-      height: 330,
-      sparkline: {
-        enabled: true,
-      },
-    },
-    plotOptions: {
-      radialBar: {
-        startAngle: -85,
-        endAngle: 85,
-        hollow: {
-          size: '80%',
-        },
-        track: {
-          background: '#E4E7EC',
-          strokeWidth: '100%',
-          margin: 5, // margin is in pixels
-        },
-        dataLabels: {
-          name: {
-            show: false,
-          },
-          value: {
-            fontSize: '36px',
-            fontWeight: '600',
-            offsetY: -40,
-            color: '#1D2939',
-            formatter(val) {
-              return `${val}%`
-            },
-          },
-        },
-      },
-    },
-    fill: {
-      type: 'solid',
-      colors: ['#465FFF'],
-    },
-    stroke: {
-      lineCap: 'round',
-    },
-    labels: ['Progress'],
-  }
+
+  const data = [
+    { name: 'Progress', value: series }, // 进度值
+    { name: 'Remaining', value: 100 - series }, // 剩余部分
+  ];
+
   // eslint-disable-next-line unused-imports/no-unused-vars
   const [isOpen, setIsOpen] = useState(false)
 
@@ -105,13 +63,39 @@ export default function MonthlyTarget(): React.ReactElement {
           </div>
         </div>
         <div className="relative ">
-          <div className="max-h-[330px]" id="chartDarkStyle">
-            <Chart
-              options={options}
-              series={series}
-              type="radialBar"
-              height={330}
-            />
+          <div className="h-[160px]" id="chartDarkStyle">
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart>
+                <Pie
+                  data={data}
+                  cx="50%"
+                  cy="90%" // 控制半圆位置（底部居中）
+                  innerRadius={120}
+                  outerRadius={130}
+                  startAngle={180}
+                  endAngle={0}
+                  dataKey="value"
+                  cornerRadius={10}
+                  strokeLinecap="round"
+                >
+                  <Cell fill="#465fff"/>
+                  {' '}
+                  <Cell fill="#eee" />
+                  {' '}
+                </Pie>
+                {/* 自定义中心文本 */}
+                <text
+                  x="50%"
+                  y="70%"
+                  textAnchor="middle"
+                  dominantBaseline="middle"
+                  fontSize="24"
+                  fontWeight="bold"
+                >
+                  {`${series}%`}
+                </text>
+              </PieChart>
+            </ResponsiveContainer>
           </div>
 
           <span className="absolute left-1/2 top-full -translate-x-1/2 -translate-y-[95%] rounded-full bg-success-50 px-3 py-1 text-xs font-medium text-success-600 dark:bg-success-500/15 dark:text-success-500">
