@@ -7,7 +7,7 @@ import UserDropdown from '@/components/header/UserDropdown'
 import { Button } from '@/components/ui/button'
 import { Icons } from '@/components/ui/icons'
 
-import { useSidebar } from '../context/SidebarContext'
+import { useSidebar } from '@/context/SidebarContext'
 
 const AppHeader: React.FC = () => {
   const [isApplicationMenuOpen, setApplicationMenuOpen] = useState(false)
