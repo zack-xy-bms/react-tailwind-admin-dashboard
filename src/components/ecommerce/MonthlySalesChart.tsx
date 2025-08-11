@@ -1,6 +1,8 @@
-import type { ApexOptions } from 'apexcharts'
+import type { TooltipContentProps } from 'recharts'
 import { useState } from 'react'
-import Chart from 'react-apexcharts'
+
+import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
+
 import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
@@ -12,91 +14,73 @@ import {
 import { Icons } from '@/components/ui/icons'
 
 export default function MonthlySalesChart(): React.ReactElement {
-  const options: ApexOptions = {
-    colors: ['#465fff'],
-    chart: {
-      fontFamily: 'Outfit, sans-serif',
-      type: 'bar',
-      height: 180,
-      toolbar: {
-        show: false,
-      },
-    },
-    plotOptions: {
-      bar: {
-        horizontal: false,
-        columnWidth: '39%',
-        borderRadius: 5,
-        borderRadiusApplication: 'end',
-      },
-    },
-    dataLabels: {
-      enabled: false,
-    },
-    stroke: {
-      show: true,
-      width: 4,
-      colors: ['transparent'],
-    },
-    xaxis: {
-      categories: [
-        'Jan',
-        'Feb',
-        'Mar',
-        'Apr',
-        'May',
-        'Jun',
-        'Jul',
-        'Aug',
-        'Sep',
-        'Oct',
-        'Nov',
-        'Dec',
-      ],
-      axisBorder: {
-        show: false,
-      },
-      axisTicks: {
-        show: false,
-      },
-    },
-    legend: {
-      show: true,
-      position: 'top',
-      horizontalAlign: 'left',
-      fontFamily: 'Outfit',
-    },
-    yaxis: {
-      title: {
-        text: undefined,
-      },
-    },
-    grid: {
-      yaxis: {
-        lines: {
-          show: true,
-        },
-      },
-    },
-    fill: {
-      opacity: 1,
-    },
-
-    tooltip: {
-      x: {
-        show: false,
-      },
-      y: {
-        formatter: (val: number) => `${val}`,
-      },
-    },
-  }
-  const series = [
+  const data = [
     {
-      name: 'Sales',
-      data: [168, 385, 201, 298, 187, 195, 291, 110, 215, 390, 280, 112],
+      name: 'Jan',
+      sales: 168,
+    },
+    {
+      name: 'Feb',
+      sales: 385,
+    },
+    {
+      name: 'Mar',
+      sales: 201,
+    },
+    {
+      name: 'Apr',
+      sales: 298,
+    },
+    {
+      name: 'May',
+      sales: 187,
+    },
+    {
+      name: 'Jun',
+      sales: 195,
+    },
+    {
+      name: 'Jul',
+      sales: 291,
+    },
+    {
+      name: 'Aug',
+      sales: 110,
+    },
+    {
+      name: 'Sep',
+      sales: 215,
+    },
+    {
+      name: 'Oct',
+      sales: 390,
+    },
+    {
+      name: 'Nov',
+      sales: 280,
+    },
+    {
+      name: 'Dec',
+      sales: 112,
     },
   ]
+
+  const CustomTooltip = ({ active, payload, label }: TooltipContentProps<number, string>) => {
+    const isVisible = active && payload && payload.length
+    return (
+      <div className="bg-white/80 border rounded-lg p-2" style={{ visibility: isVisible ? 'visible' : 'hidden' }}>
+        {isVisible && (
+          <>
+            <p className="text-black">
+              <span className="inline-block w-[10px] h-[10px] rounded-full bg-[#465fff] mr-1 align-middle"></span>
+              {`${label} : ${payload[0].value}`}
+            </p>
+          </>
+        )}
+      </div>
+    )
+  }
+
   // eslint-disable-next-line unused-imports/no-unused-vars
   const [isOpen, setIsOpen] = useState(false)
 
@@ -132,8 +116,31 @@ export default function MonthlySalesChart(): React.ReactElement {
       </div>
 
       <div className="max-w-full overflow-x-auto custom-scrollbar">
-        <div className="-ml-5 min-w-[650px] xl:min-w-full pl-2">
-          <Chart options={options} series={series} type="bar" height={180} />
+        <div className="min-w-[650px] h-[190px] xl:min-w-full">
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart
+              data={data}
+              margin={{
+                top: 5,
+                right: 30,
+                left: 20,
+                bottom: 0,
+              }}
+            >
+              <CartesianGrid vertical={false} stroke="#E4E7EC" />
+              <XAxis dataKey="name" tick={{ fontSize: 12 }} />
+              <YAxis tick={{ fontSize: 12 }} />
+              <Tooltip
+                content={CustomTooltip}
+                cursor={{
+                  fill: '#f5f5f5',
+                  fillOpacity: 0.8,
+                }}
+              />
+              {/* <Legend /> */}
+              <Bar dataKey="sales" barSize={10} radius={[10, 10, 0, 0]} fill="#465fff" activeBar={{ fill: '#1a12d6' }} />
+            </BarChart>
+          </ResponsiveContainer>
         </div>
       </div>
     </div>

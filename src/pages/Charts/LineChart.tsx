@@ -1,4 +1,3 @@
-import LineChartOne from '@/components/charts/line/LineChartOne'
 import ComponentCard from '@/components/common/ComponentCard'
 import PageBreadcrumb from '@/components/common/PageBreadCrumb'
 import PageMeta from '@/components/common/PageMeta'
@@ -13,7 +12,7 @@ export default function LineChart(): React.ReactElement {
       <PageBreadcrumb pageTitle="Line Chart" />
       <div className="space-y-6">
         <ComponentCard title="Line Chart 1">
-          <LineChartOne />
+          折线图
         </ComponentCard>
       </div>
     </>
