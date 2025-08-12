@@ -16,6 +16,7 @@ import {
   Eye,
   EyeClosed,
   Files,
+  FunnelPlus,
   Info,
   LayoutGrid,
   LogOut,
@@ -76,6 +77,7 @@ const Icons = {
   Search,
   Sun,
   X,
+  FunnelPlus,
 }
 
 export {

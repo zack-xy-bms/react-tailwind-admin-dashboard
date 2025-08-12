@@ -149,7 +149,7 @@ const AppSidebar: React.FC = () => {
         <li key={nav.name}>
           {nav.subItems
             ? (
-                <button
+                <div
                   onClick={() => handleSubmenuToggle(index, menuType)}
                   className={`menu-item group ${
                     openSubmenu?.type === menuType && openSubmenu?.index === index
@@ -183,7 +183,7 @@ const AppSidebar: React.FC = () => {
                       }`}
                     />
                   )}
-                </button>
+                </div>
               )
             : (
                 nav.path && (
