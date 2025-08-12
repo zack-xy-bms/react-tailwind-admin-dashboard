@@ -9,8 +9,13 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import { Icons } from '@/components/ui/icons'
+import { useTheme } from '@/context/ThemeContext';
 
 export default function MonthlyTarget(): React.ReactElement {
+  // eslint-disable-next-line unused-imports/no-unused-vars
+  const [isOpen, setIsOpen] = useState(false)
+  const { theme } = useTheme()
+
   const series = 75.55
   const infos = {
     Target: { count: '$20K', type: 'down' },
@@ -23,8 +28,7 @@ export default function MonthlyTarget(): React.ReactElement {
     { name: 'Remaining', value: 100 - series }, // 剩余部分
   ]
 
-  // eslint-disable-next-line unused-imports/no-unused-vars
-  const [isOpen, setIsOpen] = useState(false)
+
 
   function handleOpenChange(open: boolean): void {
     setIsOpen(open)
@@ -91,6 +95,8 @@ export default function MonthlyTarget(): React.ReactElement {
                   dominantBaseline="middle"
                   fontSize="24"
                   fontWeight="bold"
+                  fill={theme==='dark' ? 'white' : '#333'}
+                  className='dark:text-white/90'
                 >
                   {`${series}%`}
                 </text>
