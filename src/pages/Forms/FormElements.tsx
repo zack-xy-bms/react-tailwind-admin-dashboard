@@ -15,15 +15,17 @@ const formSchema = z.object({
   }),
 })
 
+type UserForm = z.infer<typeof formSchema>
+
 export default function FormElements() {
-  const form = useForm<z.infer<typeof formSchema>>({
+  const form = useForm<UserForm>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       username: '',
     },
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  function onSubmit(values: UserForm) {
     // eslint-disable-next-line no-console
     console.log(values)
   }
