@@ -38,41 +38,42 @@ export default function UserMetaCard(): React.ReactElement {
               </div>
             </div>
             <div className="flex items-center order-2 gap-2 grow xl:order-3 xl:justify-end">
-              <a
-                href="https://www.facebook.com/PimjoHQ"
-                target="_blank"
-                rel="noopener"
-                className="flex h-11 w-11 items-center justify-center gap-2 rounded-full border border-gray-300 bg-white text-sm font-medium text-gray-700 shadow-theme-xs hover:bg-gray-50 hover:text-gray-800 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-white/[0.03] dark:hover:text-gray-200"
-              >
-                <FacebookIcon width={20} height={20} />
-              </a>
-
-              <a
-                href="https://x.com/PimjoHQ"
-                target="_blank"
-                rel="noopener"
-                className="flex h-11 w-11 items-center justify-center gap-2 rounded-full border border-gray-300 bg-white text-sm font-medium text-gray-700 shadow-theme-xs hover:bg-gray-50 hover:text-gray-800 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-white/[0.03] dark:hover:text-gray-200"
-              >
-                <XLogoIcon width={20} height={20} />
-              </a>
-
-              <a
-                href="https://www.linkedin.com/company/pimjo"
-                target="_blank"
-                rel="noopener"
-                className="flex h-11 w-11 items-center justify-center gap-2 rounded-full border border-gray-300 bg-white text-sm font-medium text-gray-700 shadow-theme-xs hover:bg-gray-50 hover:text-gray-800 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-white/[0.03] dark:hover:text-gray-200"
-              >
-                <LinkedinIcon width={20} height={20} />
-              </a>
-
-              <a
-                href="https://instagram.com/PimjoHQ"
-                target="_blank"
-                rel="noopener"
-                className="flex h-11 w-11 items-center justify-center gap-2 rounded-full border border-gray-300 bg-white text-sm font-medium text-gray-700 shadow-theme-xs hover:bg-gray-50 hover:text-gray-800 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-white/[0.03] dark:hover:text-gray-200"
-              >
-                <InstagramIcon width={20} height={20} />
-              </a>
+              <Button variant="rounded" className="h-12! w-12!" asChild>
+                <a
+                  href="https://www.facebook.com/PimjoHQ"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <FacebookIcon width={20} height={20} />
+                </a>
+              </Button>
+              <Button variant="rounded" className="h-12! w-12!" asChild>
+                <a
+                  href="https://x.com/PimjoHQ"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <XLogoIcon width={20} height={20} />
+                </a>
+              </Button>
+              <Button variant="rounded" className="h-12! w-12!" asChild>
+                <a
+                  href="https://www.linkedin.com/company/pimjo"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <LinkedinIcon width={20} height={20} />
+                </a>
+              </Button>
+              <Button variant="rounded" className="h-12! w-12!" asChild>
+                <a
+                  href="https://instagram.com/PimjoHQ"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <InstagramIcon width={20} height={20} />
+                </a>
+              </Button>
             </div>
           </div>
 
