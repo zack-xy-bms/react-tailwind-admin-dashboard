@@ -1,4 +1,4 @@
-import type { UserInfos } from '@/types'
+import type { UserInfo } from '@schemas'
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import {
@@ -17,7 +17,7 @@ import { Label } from '@/components/ui/label'
 
 export default function UserInfoCard(): React.ReactElement {
   // const { isOpen, openModal, closeModal } = useModal()
-  const [userInfo] = useState<Omit<UserInfos, 'socialMedia'>>({
+  const [userInfo] = useState<Omit<UserInfo, 'socialLinks'>>({
     firstname: 'Lisa',
     lastname: 'Wang',
     email: 'lisa.wang@example.com',

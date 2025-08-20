@@ -1,3 +1,7 @@
+import type { UserInfo } from '@schemas'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { userInfoSchema } from '@schemas'
+import { useForm } from 'react-hook-form'
 import { Button } from '@/components/ui/button'
 import {
   Dialog,
@@ -9,12 +13,49 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog'
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
 import { FacebookIcon, Icons, InstagramIcon, LinkedinIcon, XLogoIcon } from '@/components/ui/icons'
+
 import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
 
 export default function UserMetaCard(): React.ReactElement {
   // const { isOpen, openModal, closeModal } = useModal()
+
+  const form = useForm<UserInfo>({
+    resolver: zodResolver(userInfoSchema),
+    mode: 'onChange',
+    defaultValues: {
+      firstname: 'Wang',
+      lastname: 'Lisa',
+      email: 'lisa.wang@example.com',
+      phone: '+86 12345678',
+      bio: 'Team Manager',
+      socialLinks: [
+        {
+          platform: 'facebook',
+          link: 'https://www.facebook.com/zackzheng',
+        },
+        {
+          platform: 'x.com',
+          link: 'https://x.com/PimjoHQ',
+        },
+        {
+          platform: 'linkedin',
+          link: 'https://www.linkedin.com/company/pimjo',
+        },
+        {
+          platform: 'instagram',
+          link: 'https://instagram.com/PimjoHQ',
+        },
+      ],
+    },
+  })
+
+  function onSubmit(values: UserInfo) {
+    // eslint-disable-next-line no-console
+    console.log(values)
+  }
+
   return (
     <>
       <div className="p-5 border border-gray-200 rounded-2xl dark:border-gray-800 lg:p-6">
@@ -78,95 +119,183 @@ export default function UserMetaCard(): React.ReactElement {
           </div>
 
           <Dialog>
-            <form className="flex flex-col">
-              <DialogTrigger asChild>
-                <Button variant="rounded">
-                  <Icons.Pencil size={16} />
-                  Edit
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="sm:max-w-[700px]">
-                <DialogHeader>
-                  <DialogTitle>Edit Personal Information</DialogTitle>
-                  <DialogDescription>
-                    Update your details to keep your profile up-to-date.
-                  </DialogDescription>
-                </DialogHeader>
-                <div className="custom-scrollbar h-[450px] overflow-y-auto px-2 pb-3">
-                  <div>
-                    <h5 className="mb-5 text-lg font-medium text-gray-800 dark:text-white/90 lg:mb-6">
-                      Social Links
-                    </h5>
+            <DialogTrigger asChild>
+              <Button variant="rounded">
+                <Icons.Pencil size={16} />
+                Edit
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[700px]">
+              <DialogHeader>
+                <DialogTitle>Edit Personal Information</DialogTitle>
+                <DialogDescription>
+                  Update your details to keep your profile up-to-date.
+                </DialogDescription>
+              </DialogHeader>
+              <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)}>
+                  <div className="custom-scrollbar h-[450px] overflow-y-auto px-2 pb-3">
+                    <div>
+                      <h5 className="mb-5 text-lg font-medium text-gray-800 dark:text-white/90 lg:mb-6">
+                        Social Links
+                      </h5>
 
-                    <div className="grid grid-cols-1 gap-x-6 gap-y-5 lg:grid-cols-2">
-                      <div>
-                        <Label>Facebook</Label>
-                        <Input
-                          type="text"
-                          value="https://www.facebook.com/PimjoHQ"
-                        />
+                      <div className="grid grid-cols-1 gap-x-6 gap-y-5 lg:grid-cols-2">
+                        <div>
+                          <FormField
+                            control={form.control}
+                            name="socialLinks.0.link"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Facebook</FormLabel>
+                                <FormControl>
+                                  <Input placeholder="Facebook Link" {...field} />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                        </div>
+                        <div>
+                          <FormField
+                            control={form.control}
+                            name="socialLinks.1.link"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>X.com</FormLabel>
+                                <FormControl>
+                                  <Input placeholder="X.com Link" {...field} />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                        </div>
+                        <div>
+                          <FormField
+                            control={form.control}
+                            name="socialLinks.2.link"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Linkedin</FormLabel>
+                                <FormControl>
+                                  <Input placeholder="Linkedin Link" {...field} />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                        </div>
+                        <div>
+                          <FormField
+                            control={form.control}
+                            name="socialLinks.3.link"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Instagram</FormLabel>
+                                <FormControl>
+                                  <Input placeholder="Instagram Link" {...field} />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                        </div>
                       </div>
+                    </div>
+                    <div className="mt-7">
+                      <h5 className="mb-5 text-lg font-medium text-gray-800 dark:text-white/90 lg:mb-6">
+                        Personal Information
+                      </h5>
 
-                      <div>
-                        <Label>X.com</Label>
-                        <Input type="text" value="https://x.com/PimjoHQ" />
-                      </div>
-
-                      <div>
-                        <Label>Linkedin</Label>
-                        <Input
-                          type="text"
-                          value="https://www.linkedin.com/company/pimjo"
-                        />
-                      </div>
-
-                      <div>
-                        <Label>Instagram</Label>
-                        <Input type="text" value="https://instagram.com/PimjoHQ" />
+                      <div className="grid grid-cols-1 gap-x-6 gap-y-5 lg:grid-cols-2">
+                        <div className="col-span-2 lg:col-span-1">
+                          <FormField
+                            control={form.control}
+                            name="firstname"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>First Name</FormLabel>
+                                <FormControl>
+                                  <Input placeholder="First Name" {...field} />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                        </div>
+                        <div className="col-span-2 lg:col-span-1">
+                          <FormField
+                            control={form.control}
+                            name="lastname"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Last Name</FormLabel>
+                                <FormControl>
+                                  <Input placeholder="Last Name" {...field} />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                        </div>
+                        <div className="col-span-2 lg:col-span-1">
+                          <FormField
+                            control={form.control}
+                            name="email"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Email Address</FormLabel>
+                                <FormControl>
+                                  <Input placeholder="Email Address" {...field} />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                        </div>
+                        <div className="col-span-2 lg:col-span-1">
+                          <FormField
+                            control={form.control}
+                            name="phone"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Phone</FormLabel>
+                                <FormControl>
+                                  <Input placeholder="Phone number" {...field} />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                        </div>
+                        <div className="col-span-2">
+                          <FormField
+                            control={form.control}
+                            name="bio"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Bio</FormLabel>
+                                <FormControl>
+                                  <Input placeholder="Bio" {...field} />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div className="mt-7">
-                    <h5 className="mb-5 text-lg font-medium text-gray-800 dark:text-white/90 lg:mb-6">
-                      Personal Information
-                    </h5>
-
-                    <div className="grid grid-cols-1 gap-x-6 gap-y-5 lg:grid-cols-2">
-                      <div className="col-span-2 lg:col-span-1">
-                        <Label>First Name</Label>
-                        <Input type="text" value="Musharof" />
-                      </div>
-
-                      <div className="col-span-2 lg:col-span-1">
-                        <Label>Last Name</Label>
-                        <Input type="text" value="Chowdhury" />
-                      </div>
-
-                      <div className="col-span-2 lg:col-span-1">
-                        <Label>Email Address</Label>
-                        <Input type="text" value="randomuser@pimjo.com" />
-                      </div>
-
-                      <div className="col-span-2 lg:col-span-1">
-                        <Label>Phone</Label>
-                        <Input type="text" value="+09 363 398 46" />
-                      </div>
-
-                      <div className="col-span-2">
-                        <Label>Bio</Label>
-                        <Input type="text" value="Team Manager" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <DialogFooter>
-                  <DialogClose asChild>
-                    <Button size="lg" variant="outline">Close</Button>
-                  </DialogClose>
-                  <Button size="lg" type="submit">Save changes</Button>
-                </DialogFooter>
-              </DialogContent>
-            </form>
+                  <DialogFooter>
+                    <DialogClose asChild>
+                      <Button size="lg" variant="outline">Close</Button>
+                    </DialogClose>
+                    <Button size="lg" type="submit">Save changes</Button>
+                  </DialogFooter>
+                </form>
+              </Form>
+            </DialogContent>
           </Dialog>
 
         </div>
