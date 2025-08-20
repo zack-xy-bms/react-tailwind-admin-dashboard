@@ -1,6 +1,7 @@
 import type { UserInfo } from '@schemas'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { userInfoSchema } from '@schemas'
+import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { Button } from '@/components/ui/button'
 import {
@@ -14,12 +15,13 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog'
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
-import { FacebookIcon, Icons, InstagramIcon, LinkedinIcon, XLogoIcon } from '@/components/ui/icons'
 
+import { FacebookIcon, Icons, InstagramIcon, LinkedinIcon, XLogoIcon } from '@/components/ui/icons'
 import { Input } from '@/components/ui/input'
 
 export default function UserMetaCard(): React.ReactElement {
   // const { isOpen, openModal, closeModal } = useModal()
+  const [isOpen, setIsOpen] = useState(false)
 
   const form = useForm<UserInfo>({
     resolver: zodResolver(userInfoSchema),
@@ -54,6 +56,11 @@ export default function UserMetaCard(): React.ReactElement {
   function onSubmit(values: UserInfo) {
     // eslint-disable-next-line no-console
     console.log(values)
+  }
+
+  function handleDialogToggle(open: boolean) {
+    form.clearErrors()
+    setIsOpen(open)
   }
 
   return (
@@ -118,7 +125,7 @@ export default function UserMetaCard(): React.ReactElement {
             </div>
           </div>
 
-          <Dialog>
+          <Dialog onOpenChange={handleDialogToggle} open={isOpen}>
             <DialogTrigger asChild>
               <Button variant="rounded">
                 <Icons.Pencil size={16} />
