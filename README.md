@@ -10,3 +10,5 @@ forked from [TailAdmin/free-react-tailwind-admin-dashboard](https://github.com/T
 4. css文件仍然有一部分冗余代码，后续需要移除
 5. @fullcalendar没用过
 6. 用的基础组件的使用和样式需要列到（UiElements），现在没列
+
+![](https://gitee.com/zackzhengxy/picGallery/raw/main/imgs/主页.png)
